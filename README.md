@@ -7,7 +7,7 @@ averaging them over a Representative Volume Element (RVE) and over its constitue
 element-by-element in the Abaqus/Python kernel, this step scales poorly with mesh size and becomes the
 practical limiting factor for high-resolution or batch RVE studies.
 This report documents the design and development of an Abaqus/CAE plug-in, built around a custom
-Abaqus GUI Toolkit (AFX) dialog and a generalized kernel-side extraction module, that automates this
+Abaqus GUI and a generalized kernel-side extraction module, that automates this
 averaging step for arbitrary field-output variables. The central contribution is a shift from the conventional
 element-by-element / node-by-node Python loop to Abaqus's bulkDataBlocks interface, which returns
 field data for an entire output request as contiguous NumPy-compatible arrays. Combined with vectorised
